@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
+    "es2020": true,
     "node": true
   },
   "extends": [
@@ -14,7 +14,12 @@
     "plugin:tailwindcss/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "@typescript-eslint", "simple-import-sort"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "react-refresh"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -46,7 +51,11 @@
     "import/no-named-as-default": 0,
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "@typescript-eslint/no-unused-vars": "error"
+    "@typescript-eslint/no-unused-vars": "error",
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ]
   },
   "ignorePatterns": ["vite.config.ts"]
 }
